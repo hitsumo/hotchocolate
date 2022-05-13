@@ -472,8 +472,8 @@
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
                         "sceneId": "5d985b87-d2bc-4be6-8a50-2fd7cb3e7d97",
-                        "x": 0,
-                        "y": 0,
+                        "x": 9,
+                        "y": 11,
                         "direction": "",
                         "fadeSpeed": "2"
                     },
@@ -484,7 +484,7 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "autoFadeEventCollapse": true,
-            "playerSpriteSheetId": "f43f9c12-fe99-46d2-940d-6918170d433c"
+            "playerSpriteSheetId": "9157a8e3-6a7d-4dec-a6fe-ea0c9d2cad68"
         },
         {
             "name": "Scene 11",
@@ -516,7 +516,8 @@
             ],
             "playerHit1Script": [],
             "playerHit2Script": [],
-            "playerHit3Script": []
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "49cb262b-6537-4c0c-91b5-db70ccf3fe01"
         },
         {
             "name": "Scene 12",
@@ -2028,7 +2029,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 84,
-        "worldScrollY": 100,
+        "worldScrollY": 0,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
