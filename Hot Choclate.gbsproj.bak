@@ -187,7 +187,7 @@
         },
         {
             "name": "Scene 10",
-            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "backgroundId": "5e02c18e-4d64-4e27-9353-8d07d92d1bfe",
             "width": 20,
             "height": 18,
             "type": "TOPDOWN",
@@ -205,8 +205,10 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "sola gittin: fikri çikti!\ndogusecek misin? ",
-                            "yoksa bitcoin olarak\nrusvet mi vereceksin?"
+                            "Cantayi ilk defa\ngoruyorsun...",
+                            "\"Kimin acaba?\"\ndiye dusunuyorsun.",
+                            "Cantanin uzerinde\nharf islenmis...",
+                            "Alttan sapkali\n\"S\" harfi."
                         ],
                         "avatarId": ""
                     },
@@ -610,7 +612,7 @@
             "autoFadeSpeed": 1,
             "id": "784b9497-f714-429b-8484-13215ee9ffb7",
             "x": 379.33333587646484,
-            "y": 1087,
+            "y": 1088,
             "actors": [],
             "triggers": [],
             "script": [
@@ -659,6 +661,32 @@
                                     "avatarId": ""
                                 },
                                 "id": "98017b19-a2c5-4cbb-98c5-339b1b8ce4d0"
+                            },
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Kendini yavas yavas \ndaha iyi hissetmeye \nbasladin.\n",
+                                        "Etrafa bakinmaya \nbasladin\n3 tane kapi gordun.",
+                                        "Odanin ortasindaki \nyataga bakiyorsun.",
+                                        "Yerde yatagin ayak\ndibinde bir canta \ngoruyorsun.",
+                                        "Cantaya dogru\nyuruyosun."
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "e3a791e3-ae44-4716-a34d-6f3ba0622c12"
+                            },
+                            {
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "04141bb3-ebfe-4ecb-9dfc-b26da4823d73",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "",
+                                    "fadeSpeed": "2",
+                                    "__collapse": true
+                                },
+                                "id": "4c2e23ca-abf4-42b4-b54d-b0564f50f59f"
                             }
                         ],
                         "false": []
@@ -686,7 +714,7 @@
                         "fadeSpeed": "2",
                         "__collapse": true
                     },
-                    "id": "4c2e23ca-abf4-42b4-b54d-b0564f50f59f"
+                    "id": "98f7a233-0b1c-4df7-84f7-e25ec56627a5"
                 }
             ],
             "playerHit1Script": [],
@@ -1131,6 +1159,15 @@
             "imageHeight": 144,
             "filename": "bos_masa.png",
             "tileColors": []
+        },
+        {
+            "id": "5e02c18e-4d64-4e27-9353-8d07d92d1bfe",
+            "name": "canta",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "canta.png"
         },
         {
             "id": "df3d88f0-0f73-4efd-a442-f64aaab707f1",
@@ -3099,6 +3136,10 @@
     ],
     "variables": [
         {
+            "id": "0",
+            "name": "Almak"
+        },
+        {
             "id": "6",
             "name": "Variable 6"
         },
@@ -3113,10 +3154,6 @@
         {
             "id": "8f51e4fb-4dc3-4575-9b46-600403711f47__L1",
             "name": "$10$ : GOLD"
-        },
-        {
-            "id": "0",
-            "name": "Almak"
         }
     ],
     "engineFieldValues": [
@@ -3134,8 +3171,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 208.6666717529297,
-        "worldScrollY": 428,
+        "worldScrollX": 102.66666412353516,
+        "worldScrollY": 894.6666870117188,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
