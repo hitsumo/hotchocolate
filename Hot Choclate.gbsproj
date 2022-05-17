@@ -206,7 +206,7 @@
                     "args": {
                         "text": [
                             "Cantayi ilk defa\ngoruyorsun...",
-                            "\"Kimin acaba?\"\ndiye dusunuyorsun.",
+                            "//Kimin acaba?//\ndiye dusunuyorsun.",
                             "Cantanin uzerinde\nharf islenmis...",
                             "Alttan sapkali\n\"S\" harfi."
                         ],
@@ -247,7 +247,8 @@
                                     "text": [
                                         "Cantayi actin.\nIcine bakiyorsun",
                                         "Icinde:",
-                                        ""
+                                        "Su dolu minik bir sise, \nIki peynirli tost...",
+                                        "...bir minik bicak,\nbir kibrit ve\nkagit parcasi \nbuluyorsun."
                                     ],
                                     "avatarId": ""
                                 },
@@ -257,6 +258,16 @@
                         "false": []
                     },
                     "id": "a5d2f93f-a222-446e-8fc6-2eb60018520d"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Cantayi acmadan \nyatagin yanina koydun"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "44938f0a-9792-400c-a007-3c0fba2c83b1"
                 }
             ],
             "playerHit1Script": [],
@@ -264,7 +275,7 @@
             "playerHit3Script": []
         },
         {
-            "name": "Scene 4",
+            "name": "SAHNE 11",
             "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "width": 20,
             "height": 18,
@@ -274,8 +285,8 @@
             "collisions": [],
             "autoFadeSpeed": 1,
             "id": "9593f41e-b088-4a73-8738-7172c025f421",
-            "x": 619.3333358764648,
-            "y": 1507,
+            "x": 160.33333587646484,
+            "y": 1497,
             "actors": [],
             "triggers": [],
             "script": [],
@@ -288,7 +299,7 @@
             "backgroundId": "2c2d3802-006c-4d7f-aaa5-cb6ce78c58fd",
             "width": 20,
             "height": 18,
-            "type": "TOPDOWN",
+            "type": "ADVENTURE",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [
@@ -770,7 +781,7 @@
             "backgroundId": "00929911-6ab5-4044-b84d-675101d566d9",
             "width": 20,
             "height": 18,
-            "type": "TOPDOWN",
+            "type": "ADVENTURE",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [],
@@ -824,7 +835,7 @@
             "backgroundId": "1eed03af-9576-40ff-9654-ca9147fdbdfe",
             "width": 20,
             "height": 18,
-            "type": "TOPDOWN",
+            "type": "ADVENTURE",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [],
@@ -867,7 +878,7 @@
             "backgroundId": "15f4c542-42cd-4c86-877a-6a1cd7061def",
             "width": 20,
             "height": 18,
-            "type": "TOPDOWN",
+            "type": "ADVENTURE",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [],
@@ -910,7 +921,7 @@
             "backgroundId": "6318fd5d-b7ed-4303-aeb9-16c59b0b8c84",
             "width": 20,
             "height": 18,
-            "type": "TOPDOWN",
+            "type": "ADVENTURE",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [],
@@ -955,7 +966,7 @@
             "backgroundId": "631977dd-eb5c-47be-b9fe-84b64395a721",
             "width": 20,
             "height": 18,
-            "type": "TOPDOWN",
+            "type": "ADVENTURE",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [],
@@ -966,6 +977,11 @@
             "actors": [],
             "triggers": [],
             "script": [
+                {
+                    "command": "EVENT_HIDE_SPRITES",
+                    "args": {},
+                    "id": "264d7ba9-44a5-4756-9de0-d0ccf3e6e540"
+                },
                 {
                     "command": "EVENT_TEXT",
                     "args": {
@@ -986,11 +1002,6 @@
                         "fadeSpeed": "2"
                     },
                     "id": "37b76946-385d-4b50-b89e-850397b8a327"
-                },
-                {
-                    "command": "EVENT_HIDE_SPRITES",
-                    "args": {},
-                    "id": "264d7ba9-44a5-4756-9de0-d0ccf3e6e540"
                 }
             ],
             "playerHit1Script": [],
@@ -1004,7 +1015,7 @@
             "backgroundId": "4f6bcc00-b671-4c6c-8835-7e8ac80db0ba",
             "width": 20,
             "height": 18,
-            "type": "TOPDOWN",
+            "type": "ADVENTURE",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [],
@@ -1095,7 +1106,7 @@
             "backgroundId": "df3d88f0-0f73-4efd-a442-f64aaab707f1",
             "width": 20,
             "height": 18,
-            "type": "TOPDOWN",
+            "type": "ADVENTURE",
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [],
@@ -1211,7 +1222,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "canta.png"
+            "filename": "canta.png",
+            "tileColors": []
         },
         {
             "id": "df3d88f0-0f73-4efd-a442-f64aaab707f1",
@@ -3219,8 +3231,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 102.66666412353516,
-        "worldScrollY": 894.6666870117188,
+        "worldScrollX": 84,
+        "worldScrollY": 1070,
         "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -3249,20 +3261,20 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            205,
-            113,
-            279
+            221,
+            122,
+            301
         ],
         "showNavigator": true,
         "defaultFontId": "8ed435d9-51cb-44e7-8b0d-ca85e63ca427",
         "defaultCharacterEncoding": "",
         "defaultPlayerSprites": {
-            "TOPDOWN": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
-            "PLATFORM": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
-            "ADVENTURE": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
-            "SHMUP": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
-            "POINTNCLICK": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
-            "LOGO": "581d34d0-9591-4e6e-a609-1d94f203b0cd"
+            "TOPDOWN": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
+            "PLATFORM": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
+            "ADVENTURE": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
+            "SHMUP": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
+            "POINTNCLICK": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
+            "LOGO": "11b5452b-187c-43a3-afb1-a1f4f74ffda2"
         },
         "musicDriver": "huge",
         "cartType": "mbc5",
