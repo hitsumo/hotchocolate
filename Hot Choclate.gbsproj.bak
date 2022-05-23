@@ -1,6 +1,6 @@
 {
     "name": "Hot Choclate",
-    "author": "197587",
+    "author": "hitsumo",
     "_version": "3.0.0",
     "_release": "1",
     "scenes": [
@@ -64,7 +64,7 @@
             "playerSpriteSheetId": "16748912-242c-4144-9d72-db3fb2f35357"
         },
         {
-            "name": "SAHNE 11",
+            "name": "SAHNE 13",
             "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "width": 20,
             "height": 18,
@@ -200,7 +200,7 @@
             "playerSpriteSheetId": "49cb262b-6537-4c0c-91b5-db70ccf3fe01"
         },
         {
-            "name": "Scene 10",
+            "name": "SAHNE 10",
             "backgroundId": "5e02c18e-4d64-4e27-9353-8d07d92d1bfe",
             "width": 20,
             "height": 18,
@@ -269,6 +269,17 @@
                                     "avatarId": ""
                                 },
                                 "id": "5835f7be-12e6-4000-ba56-54d7b41ef570"
+                            },
+                            {
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "01b0d78f-0744-4654-8666-cfd99d04c261",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                },
+                                "id": "617746a1-4c35-4f22-a178-7f6852a04b82"
                             }
                         ],
                         "false": []
@@ -276,12 +287,23 @@
                     "id": "01cdd05e-b361-4a12-b611-1826f6b991ba"
                 },
                 {
+                    "command": "EVENT_CHOICE",
+                    "args": {
+                        "variable": "L0",
+                        "trueText": "",
+                        "falseText": "",
+                        "__collapse": true
+                    },
+                    "id": "9659ffd2-2149-48f0-b67c-6d8cfbebc496"
+                },
+                {
                     "command": "EVENT_IF_FALSE",
                     "args": {
                         "variable": "L0",
                         "__collapseElse": true,
                         "__disableElse": true,
-                        "__comment": false
+                        "__comment": false,
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -299,15 +321,6 @@
                         "false": []
                     },
                     "id": "a5d2f93f-a222-446e-8fc6-2eb60018520d"
-                },
-                {
-                    "command": "EVENT_CHOICE",
-                    "args": {
-                        "variable": "L0",
-                        "trueText": "",
-                        "falseText": ""
-                    },
-                    "id": "9659ffd2-2149-48f0-b67c-6d8cfbebc496"
                 }
             ],
             "playerHit1Script": [],
@@ -315,7 +328,7 @@
             "playerHit3Script": []
         },
         {
-            "name": "SAHNE 11",
+            "name": "SAHNE 15",
             "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "width": 20,
             "height": 18,
@@ -325,8 +338,8 @@
             "collisions": [],
             "autoFadeSpeed": 1,
             "id": "9593f41e-b088-4a73-8738-7172c025f421",
-            "x": 128.33333587646484,
-            "y": 1507,
+            "x": 61.333335876464844,
+            "y": 1475,
             "actors": [],
             "triggers": [],
             "script": [],
@@ -1100,7 +1113,7 @@
             "playerSpriteSheetId": "49cb262b-6537-4c0c-91b5-db70ccf3fe01"
         },
         {
-            "name": "SAHNE 12",
+            "name": "SAHNE 14",
             "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "width": 20,
             "height": 18,
@@ -1529,8 +1542,8 @@
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "cebeafc6-f97c-44c8-9315-6d4221815dbe",
-                                "x": 9,
-                                "y": 9,
+                                "x": 13,
+                                "y": 14,
                                 "direction": "",
                                 "fadeSpeed": "2",
                                 "__comment": true
@@ -1561,8 +1574,8 @@
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "ba7f9eed-88fd-4599-bec5-08f0ece68076",
-                                "x": 0,
-                                "y": 0,
+                                "x": 11,
+                                "y": 2,
                                 "direction": "",
                                 "fadeSpeed": "2"
                             },
@@ -1593,8 +1606,8 @@
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "cebeafc6-f97c-44c8-9315-6d4221815dbe",
-                                "x": 15,
-                                "y": 4,
+                                "x": 17,
+                                "y": 13,
                                 "direction": "",
                                 "fadeSpeed": "2",
                                 "__comment": false
@@ -1605,7 +1618,9 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Izninizle oyunu \ntanitacagim..."
+                                    "Izninizle oyunu \ntanitacagim...",
+                                    "Burada tabelalar var.\nOyun hakkinda bilgiler\nicin bakabilirsin.",
+                                    "Once hangi tabelaya\ngideyim?"
                                 ],
                                 "avatarId": ""
                             },
@@ -1699,6 +1714,17 @@
                     "id": "adba5a54-d38a-4181-9c1a-1baf45608e74"
                 },
                 {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Merhaba Oyuncu!\nKendimi tanitayim\nBen \"Prot-O-TIP\".",
+                            "Oyunda size yardimci \nolacagim."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "ab1a70eb-0f1c-4576-ac7f-5dc3e31a1ecc"
+                },
+                {
                     "command": "EVENT_IF_ACTOR_AT_POSITION",
                     "args": {
                         "actorId": "$self$",
@@ -1712,8 +1738,8 @@
                                 "command": "EVENT_SWITCH_SCENE",
                                 "args": {
                                     "sceneId": "ba7f9eed-88fd-4599-bec5-08f0ece68076",
-                                    "x": 0,
-                                    "y": 0,
+                                    "x": 3,
+                                    "y": 1,
                                     "direction": "",
                                     "fadeSpeed": "2"
                                 },
@@ -1730,7 +1756,8 @@
                         "actorId": "$self$",
                         "x": 0,
                         "y": 13,
-                        "__collapseElse": true
+                        "__collapseElse": true,
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -1738,8 +1765,8 @@
                                 "command": "EVENT_SWITCH_SCENE",
                                 "args": {
                                     "sceneId": "cebeafc6-f97c-44c8-9315-6d4221815dbe",
-                                    "x": 5,
-                                    "y": 2,
+                                    "x": 9,
+                                    "y": 4,
                                     "direction": "down",
                                     "fadeSpeed": "2"
                                 },
@@ -1807,8 +1834,28 @@
                 15,
                 15,
                 0,
+                15,
+                15,
                 0,
                 0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                15,
+                15,
+                0,
+                0,
+                15,
                 0,
                 0,
                 0,
@@ -1960,9 +2007,9 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
+                15,
+                15,
+                15,
                 0,
                 15,
                 15,
@@ -1982,27 +2029,7 @@
                 0,
                 0,
                 0,
-                0,
-                0,
                 15,
-                15,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
                 15,
                 15,
                 15,
@@ -2128,10 +2155,107 @@
             ],
             "autoFadeSpeed": 3,
             "id": "cebeafc6-f97c-44c8-9315-6d4221815dbe",
-            "x": 160,
-            "y": 223,
-            "actors": [],
-            "triggers": [],
+            "x": 165.5,
+            "y": 223.25,
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "5bb3109e-3aa2-417a-b4d2-43c6ae5c9792",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Nasil bir oyun? \nOyunun turu ne?\nSorularini duyuyorum.",
+                                    "Oyun bol okumali. \nEylem secmeli \nseklinde olacak.",
+                                    "Baska turlu yapmak\nzor geldi.\nEn basit bu sekilde\nyapabiliyorum.",
+                                    "Umarim eylem secimleri\nicinde kaybolmam...",
+                                    "Bu olmasin diye\nYalan Rüzgarini\nizliyorum."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "8a0dfca3-995c-4b11-8eb9-290fa91d0446"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "68224a68-7e7d-4904-b27f-5eddd8684f3a",
+                    "x": 2,
+                    "y": 3
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "5bb3109e-3aa2-417a-b4d2-43c6ae5c9792",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Merhaba Oyuncu",
+                                    "Bu oyun Gameboy Studio\nile yapildi.",
+                                    "Cizim gerektiren isler\nicin libresprite \nkullanildi.",
+                                    "Muzikler icin.....!\nEee... sey... oyunda\nmuzik yok.",
+                                    "Banyoda sarki soylerim\nfakat beste yapmak\nyetenegimi asiyor",
+                                    "Neyse cok konustum.\nDiger tabelalara da\nbakin."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "71bc44de-b510-42c3-8b84-e7f663c297b0"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "f89c0c9e-a033-4f48-9926-77cb5456c734",
+                    "x": 15,
+                    "y": 11
+                }
+            ],
+            "triggers": [
+                {
+                    "name": "",
+                    "id": "c4e89cc0-5427-4dcb-a2eb-92f2b634a36f",
+                    "x": 19,
+                    "y": 13,
+                    "width": 1,
+                    "height": 1,
+                    "script": [
+                        {
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "298dcd9f-e9a3-4b05-8373-c83eb5460c74",
+                                "x": 2,
+                                "y": 15,
+                                "direction": "",
+                                "fadeSpeed": "2"
+                            },
+                            "id": "c3537ce9-fc6e-4542-a560-d1446f819bea"
+                        }
+                    ],
+                    "leaveScript": []
+                }
+            ],
             "script": [
                 {
                     "command": "EVENT_IF_ACTOR_AT_POSITION",
@@ -2164,18 +2288,98 @@
                     "id": "3b955caa-444d-43a2-af6c-e229b9ec1c2e"
                 },
                 {
-                    "command": "EVENT_TEXT",
+                    "command": "EVENT_IF_ACTOR_AT_POSITION",
                     "args": {
-                        "text": "",
-                        "avatarId": ""
+                        "actorId": "$self$",
+                        "x": 2,
+                        "y": 4,
+                        "__collapseElse": true
                     },
-                    "id": "06d85e5a-995d-4028-a906-8c191a480955"
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Oyunun turu mu ne ?",
+                                        "Bol bol okumali eylem\nsecimi yaptiginiz \nbir oyun olacak.",
+                                        "Umarim secenekler \nicinde kaybolmam",
+                                        "Bunun olmamasi\nicin Yalan Ruzgarini\nizlemeye basladim.",
+                                        "Turun boyle olmasinin\nnedeni basit.\nYaparken basit olmasi :)"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "6179a40e-18d2-4e00-8647-1ae15551b04d"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "9cedba51-f41c-4de8-ac33-7def81b28ab9"
+                }
+            ],
+            "playerHit1Script": [
+                {
+                    "command": "EVENT_IF_ACTOR_AT_POSITION",
+                    "args": {
+                        "actorId": "$self$",
+                        "x": 14,
+                        "y": 10,
+                        "__collapseElse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Merhaba Oyuncu",
+                                        "Bu oyun GameboyStudio\nile yapildi.",
+                                        "Cizim gerektiren isler\nicin libresprite \nkullanildi.",
+                                        "Muzikler icin.....!\nEe sey oyunda muzik yok.",
+                                        "Banyoda sarki soylerim\nfakat beste yapmak\nyetenegimi asiyor",
+                                        "Neyse cok konustum.\nDiger tabelalara da\nbakin."
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "cf4557cc-3eaa-41a8-be1d-ecd80e526f82"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "da1f3a91-90a4-4f15-96a8-7a35fad2444c"
+                }
+            ],
+            "playerHit2Script": [],
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "d457e548-e7a2-4fbe-a649-738e17eedff8"
+        },
+        {
+            "name": "SAHNE 11",
+            "backgroundId": "bff0cfa3-c060-40cf-a8ce-310ceb02f22b",
+            "width": 20,
+            "height": 18,
+            "type": "ADVENTURE",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "01b0d78f-0744-4654-8666-cfd99d04c261",
+            "x": 575.6666717529297,
+            "y": 1384,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "27fd10c6-d02e-4077-8ebe-e05082ac39bd"
                 }
             ],
             "playerHit1Script": [],
             "playerHit2Script": [],
-            "playerHit3Script": [],
-            "playerSpriteSheetId": "d457e548-e7a2-4fbe-a649-738e17eedff8"
+            "playerHit3Script": []
         }
     ],
     "backgrounds": [
@@ -2258,6 +2462,15 @@
             "imageHeight": 144,
             "filename": "canta.png",
             "tileColors": []
+        },
+        {
+            "id": "bff0cfa3-c060-40cf-a8ce-310ceb02f22b",
+            "name": "canta_ici",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "canta_ici.png"
         },
         {
             "id": "df3d88f0-0f73-4efd-a442-f64aaab707f1",
@@ -4719,6 +4932,133 @@
             "boundsWidth": 16,
             "boundsHeight": 16,
             "animSpeed": 15
+        },
+        {
+            "id": "5bb3109e-3aa2-417a-b4d2-43c6ae5c9792",
+            "name": "tabela",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "tabela.png",
+            "checksum": "3fe5cd2142b70c2d5d0c2e80bc22b941ca6cadf9",
+            "width": 16,
+            "height": 16,
+            "states": [
+                {
+                    "id": "d861a8c8-87bc-43fe-b0d4-54526ecd02db",
+                    "name": "",
+                    "animationType": "fixed",
+                    "flipLeft": false,
+                    "animations": [
+                        {
+                            "id": "b04c55ff-d754-4077-a29e-525863c58856",
+                            "frames": [
+                                {
+                                    "id": "05f738c9-165e-4384-9b3d-6ca4bb7a0cc2",
+                                    "tiles": [
+                                        {
+                                            "id": "4b14eab2-9a44-4b09-a1ee-4942fa03f48a",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "0499cd99-b97f-4b07-bc4c-edd7024754ba",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "957346ef-5f96-4981-b285-966b644a24cd",
+                            "frames": [
+                                {
+                                    "id": "ca29a325-f4a9-4081-98d1-05e579e459a7",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "27710af5-a296-42ce-ab0c-aeab3eb0e97b",
+                            "frames": [
+                                {
+                                    "id": "e8e3c64e-b681-41ca-ac4d-4c4a781834ae",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "558145f8-beb9-4368-a6bd-932de35530a2",
+                            "frames": [
+                                {
+                                    "id": "898ae445-b439-451f-8eca-b7cba8db3457",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4a58b870-e7cf-4f2d-bb48-5c69439ec975",
+                            "frames": [
+                                {
+                                    "id": "234ec23c-6a92-46c5-b6cc-a39f8cde71af",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "6d62eb6b-ddbf-4974-809e-f0fc6c4eaa4c",
+                            "frames": [
+                                {
+                                    "id": "6454dba7-d587-460d-b09c-0211d91ac2d3",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9ea61434-d1d7-4c2e-b33f-127a16e526e7",
+                            "frames": [
+                                {
+                                    "id": "e7171b76-c9a1-45cd-babc-c85e5b613b48",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "fe69c51c-95a5-45c2-9bdf-44196d231757",
+                            "frames": [
+                                {
+                                    "id": "183f7c27-2c22-40d3-a67e-65452ab82584",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 1,
+            "canvasWidth": 16,
+            "canvasHeight": 16,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
+            "animSpeed": 15
         }
     ],
     "palettes": [
@@ -4859,7 +5199,16 @@
             ]
         }
     ],
-    "customEvents": [],
+    "customEvents": [
+        {
+            "id": "c1385a48-d32a-4051-9d8d-03bc50e5976a",
+            "name": "",
+            "description": "tabela",
+            "variables": {},
+            "actors": {},
+            "script": []
+        }
+    ],
     "music": [
         {
             "id": "ed5d304c-c82e-4376-bc9d-bd88ff577c1e",
@@ -5040,9 +5389,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 537,
-        "worldScrollY": 687,
-        "zoom": 400,
+        "worldScrollX": 101.33333587646484,
+        "worldScrollY": 0,
+        "zoom": 100,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -5070,9 +5419,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            221,
-            122,
-            301
+            205,
+            113,
+            279
         ],
         "showNavigator": true,
         "defaultFontId": "8ed435d9-51cb-44e7-8b0d-ca85e63ca427",

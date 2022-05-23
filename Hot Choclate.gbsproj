@@ -64,7 +64,7 @@
             "playerSpriteSheetId": "16748912-242c-4144-9d72-db3fb2f35357"
         },
         {
-            "name": "SAHNE 11",
+            "name": "SAHNE 13",
             "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "width": 20,
             "height": 18,
@@ -200,7 +200,7 @@
             "playerSpriteSheetId": "49cb262b-6537-4c0c-91b5-db70ccf3fe01"
         },
         {
-            "name": "Scene 10",
+            "name": "SAHNE 10",
             "backgroundId": "5e02c18e-4d64-4e27-9353-8d07d92d1bfe",
             "width": 20,
             "height": 18,
@@ -269,6 +269,17 @@
                                     "avatarId": ""
                                 },
                                 "id": "5835f7be-12e6-4000-ba56-54d7b41ef570"
+                            },
+                            {
+                                "command": "EVENT_SWITCH_SCENE",
+                                "args": {
+                                    "sceneId": "01b0d78f-0744-4654-8666-cfd99d04c261",
+                                    "x": 0,
+                                    "y": 0,
+                                    "direction": "",
+                                    "fadeSpeed": "2"
+                                },
+                                "id": "617746a1-4c35-4f22-a178-7f6852a04b82"
                             }
                         ],
                         "false": []
@@ -276,12 +287,23 @@
                     "id": "01cdd05e-b361-4a12-b611-1826f6b991ba"
                 },
                 {
+                    "command": "EVENT_CHOICE",
+                    "args": {
+                        "variable": "L0",
+                        "trueText": "",
+                        "falseText": "",
+                        "__collapse": true
+                    },
+                    "id": "9659ffd2-2149-48f0-b67c-6d8cfbebc496"
+                },
+                {
                     "command": "EVENT_IF_FALSE",
                     "args": {
                         "variable": "L0",
                         "__collapseElse": true,
                         "__disableElse": true,
-                        "__comment": false
+                        "__comment": false,
+                        "__collapse": true
                     },
                     "children": {
                         "true": [
@@ -299,15 +321,6 @@
                         "false": []
                     },
                     "id": "a5d2f93f-a222-446e-8fc6-2eb60018520d"
-                },
-                {
-                    "command": "EVENT_CHOICE",
-                    "args": {
-                        "variable": "L0",
-                        "trueText": "",
-                        "falseText": ""
-                    },
-                    "id": "9659ffd2-2149-48f0-b67c-6d8cfbebc496"
                 }
             ],
             "playerHit1Script": [],
@@ -315,7 +328,7 @@
             "playerHit3Script": []
         },
         {
-            "name": "SAHNE 11",
+            "name": "SAHNE 15",
             "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "width": 20,
             "height": 18,
@@ -325,8 +338,8 @@
             "collisions": [],
             "autoFadeSpeed": 1,
             "id": "9593f41e-b088-4a73-8738-7172c025f421",
-            "x": 128.33333587646484,
-            "y": 1507,
+            "x": 61.333335876464844,
+            "y": 1475,
             "actors": [],
             "triggers": [],
             "script": [],
@@ -1100,7 +1113,7 @@
             "playerSpriteSheetId": "49cb262b-6537-4c0c-91b5-db70ccf3fe01"
         },
         {
-            "name": "SAHNE 12",
+            "name": "SAHNE 14",
             "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "width": 20,
             "height": 18,
@@ -1605,7 +1618,9 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Izninizle oyunu \ntanitacagim..."
+                                    "Izninizle oyunu \ntanitacagim...",
+                                    "Burada tabelalar var.\nOyun hakkinda bilgiler\nicin bakabilirsin.",
+                                    "Once hangi tabelaya\ngideyim?"
                                 ],
                                 "avatarId": ""
                             },
@@ -1699,6 +1714,17 @@
                     "id": "adba5a54-d38a-4181-9c1a-1baf45608e74"
                 },
                 {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Merhaba Oyuncu!\nKendimi tanitayim\nBen \"Prot-O-TIP\".",
+                            "Oyunda size yardimci \nolacagim."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "ab1a70eb-0f1c-4576-ac7f-5dc3e31a1ecc"
+                },
+                {
                     "command": "EVENT_IF_ACTOR_AT_POSITION",
                     "args": {
                         "actorId": "$self$",
@@ -1730,10 +1756,20 @@
                         "actorId": "$self$",
                         "x": 0,
                         "y": 13,
-                        "__collapseElse": true
+                        "__collapseElse": true,
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
+                            {
+                                "command": "EVENT_CHOICE",
+                                "args": {
+                                    "variable": "1",
+                                    "trueText": "Evet",
+                                    "falseText": "Hayir"
+                                },
+                                "id": "be0283cb-48f5-4cfc-916a-5136c70c904f"
+                            },
                             {
                                 "command": "EVENT_SWITCH_SCENE",
                                 "args": {
@@ -1749,6 +1785,16 @@
                         "false": []
                     },
                     "id": "9c528f17-9d2e-4393-bef4-9350448da0aa"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Hangi gecidi kullanayim?"
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "0ef1ce76-2c19-4830-820c-316f5b6af8bb"
                 }
             ],
             "playerHit1Script": [],
@@ -2325,6 +2371,34 @@
             "playerHit2Script": [],
             "playerHit3Script": [],
             "playerSpriteSheetId": "d457e548-e7a2-4fbe-a649-738e17eedff8"
+        },
+        {
+            "name": "SAHNE 11",
+            "backgroundId": "bff0cfa3-c060-40cf-a8ce-310ceb02f22b",
+            "width": 20,
+            "height": 18,
+            "type": "ADVENTURE",
+            "paletteIds": [],
+            "spritePaletteIds": [],
+            "collisions": [],
+            "autoFadeSpeed": 1,
+            "id": "01b0d78f-0744-4654-8666-cfd99d04c261",
+            "x": 575.6666717529297,
+            "y": 1384,
+            "actors": [],
+            "triggers": [],
+            "script": [
+                {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "27fd10c6-d02e-4077-8ebe-e05082ac39bd"
+                }
+            ],
+            "playerHit1Script": [],
+            "playerHit2Script": [],
+            "playerHit3Script": []
         }
     ],
     "backgrounds": [
@@ -2407,6 +2481,15 @@
             "imageHeight": 144,
             "filename": "canta.png",
             "tileColors": []
+        },
+        {
+            "id": "bff0cfa3-c060-40cf-a8ce-310ceb02f22b",
+            "name": "canta_ici",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "canta_ici.png"
         },
         {
             "id": "df3d88f0-0f73-4efd-a442-f64aaab707f1",
@@ -5325,9 +5408,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 522,
-        "worldScrollY": 798,
-        "zoom": 400,
+        "worldScrollX": 714.6666870117188,
+        "worldScrollY": 291.3333435058594,
+        "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -5355,9 +5438,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            221,
-            122,
-            301
+            205,
+            113,
+            279
         ],
         "showNavigator": true,
         "defaultFontId": "8ed435d9-51cb-44e7-8b0d-ca85e63ca427",
