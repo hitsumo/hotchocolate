@@ -64,142 +64,6 @@
             "playerSpriteSheetId": "16748912-242c-4144-9d72-db3fb2f35357"
         },
         {
-            "name": "SAHNE 13",
-            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
-            "width": 20,
-            "height": 18,
-            "type": "TOPDOWN",
-            "paletteIds": [],
-            "spritePaletteIds": [],
-            "collisions": [],
-            "autoFadeSpeed": 3,
-            "id": "8f51e4fb-4dc3-4575-9b46-600403711f47",
-            "x": 129.33333587646484,
-            "y": 1096,
-            "actors": [],
-            "triggers": [
-                {
-                    "name": "",
-                    "id": "3a042d92-9ecf-4c9a-9f07-09806bfa45fe",
-                    "x": 7,
-                    "y": 7,
-                    "width": 1,
-                    "height": 1,
-                    "script": [],
-                    "leaveScript": []
-                }
-            ],
-            "script": [
-                {
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Merhaba Oyuncu!\nBilmedigin bir yerde \nyatakta  uyandin."
-                        ],
-                        "avatarId": "",
-                        "__collapse": false
-                    },
-                    "id": "30af6e0f-0717-4c8c-b5e9-078ef2f572aa"
-                },
-                {
-                    "command": "EVENT_CHOICE",
-                    "args": {
-                        "variable": "L0",
-                        "trueText": "Alacagim",
-                        "falseText": "Almayacagim",
-                        "__comment": false,
-                        "__collapse": true
-                    },
-                    "id": "ba75f893-9790-4a77-ae4c-f2517dd1c0ef"
-                },
-                {
-                    "command": "EVENT_MENU",
-                    "args": {
-                        "variable": "L0",
-                        "items": 2,
-                        "option1": "alacagim2",
-                        "option2": "almayacagim2",
-                        "option3": "asagi",
-                        "option4": "vazgec",
-                        "option5": "",
-                        "option6": "",
-                        "option7": "",
-                        "option8": "",
-                        "cancelOnB": false,
-                        "layout": "dialogue",
-                        "__collapse": true
-                    },
-                    "id": "c8bbfcc3-fd43-499b-96f4-af6ea49fb051"
-                },
-                {
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Bir mektup ve su sisesi\naldin."
-                        ],
-                        "avatarId": "",
-                        "__collapse": true
-                    },
-                    "id": "1431e9a6-7755-4123-ba0a-a4ec6d89d4bc"
-                },
-                {
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Hangi yone gideceksin?"
-                        ],
-                        "avatarId": "",
-                        "__collapse": true
-                    },
-                    "id": "ac2d96b1-3795-4c0c-8dc9-450f23f9abc6"
-                },
-                {
-                    "command": "EVENT_MENU",
-                    "args": {
-                        "variable": "L0",
-                        "items": 3,
-                        "option1": "sola dogru",
-                        "option2": "saga dogru",
-                        "option3": "asagi dogru",
-                        "option4": "",
-                        "option5": "",
-                        "option6": "",
-                        "option7": "",
-                        "option8": "",
-                        "cancelOnB": true,
-                        "layout": "dialogue",
-                        "__collapse": true
-                    },
-                    "id": "1dd77a33-4efb-421a-a839-45902e0f1d1c"
-                },
-                {
-                    "command": "EVENT_CHOICE",
-                    "args": {
-                        "variable": "L0",
-                        "trueText": "",
-                        "falseText": "",
-                        "__collapse": true
-                    },
-                    "id": "0ce93769-a94b-4639-83a7-21f0ac80f00a"
-                },
-                {
-                    "command": "EVENT_SWITCH_SCENE",
-                    "args": {
-                        "sceneId": "1dfb1705-4764-4f94-9b1e-c04b5d77b4e4",
-                        "x": 0,
-                        "y": 0,
-                        "direction": "",
-                        "fadeSpeed": "2"
-                    },
-                    "id": "f2ed515c-cfef-4f45-9920-32ad476dd62d"
-                }
-            ],
-            "playerHit1Script": [],
-            "playerHit2Script": [],
-            "playerHit3Script": [],
-            "playerSpriteSheetId": "49cb262b-6537-4c0c-91b5-db70ccf3fe01"
-        },
-        {
             "name": "SAHNE 10",
             "backgroundId": "5e02c18e-4d64-4e27-9353-8d07d92d1bfe",
             "width": 20,
@@ -216,6 +80,13 @@
             "triggers": [],
             "script": [
                 {
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "8d187dfe-1847-4016-adf4-126160ded8fa"
+                },
+                {
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
@@ -225,7 +96,7 @@
                             "Alttan sapkali\n\"S\" harfi."
                         ],
                         "avatarId": "",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "799f93a5-74e2-4a42-9ddf-4c4c46fe2b52"
                 },
@@ -262,9 +133,7 @@
                                 "args": {
                                     "text": [
                                         "Cantayi actin.\nIcine bakiyorsun...",
-                                        "Icinde:",
-                                        "Su dolu minik bir sise, \nIki tane peynirli tost...",
-                                        "...bir minik bicak,\nbir kibrit ve\nkagit parcasi \nbuluyorsun."
+                                        "Icinde:"
                                     ],
                                     "avatarId": ""
                                 },
@@ -274,15 +143,27 @@
                                 "command": "EVENT_SWITCH_SCENE",
                                 "args": {
                                     "sceneId": "01b0d78f-0744-4654-8666-cfd99d04c261",
-                                    "x": 0,
-                                    "y": 0,
+                                    "x": 7,
+                                    "y": 8,
                                     "direction": "",
                                     "fadeSpeed": "2"
                                 },
                                 "id": "617746a1-4c35-4f22-a178-7f6852a04b82"
                             }
                         ],
-                        "false": []
+                        "false": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Cantayi acmadan yere\nkoydun."
+                                    ],
+                                    "avatarId": "",
+                                    "__comment": false
+                                },
+                                "id": "99f1cf1b-081d-427c-951b-450d6492cb93"
+                            }
+                        ]
                     },
                     "id": "01cdd05e-b361-4a12-b611-1826f6b991ba"
                 },
@@ -292,7 +173,8 @@
                         "variable": "L0",
                         "trueText": "",
                         "falseText": "",
-                        "__collapse": true
+                        "__collapse": false,
+                        "__comment": true
                     },
                     "id": "9659ffd2-2149-48f0-b67c-6d8cfbebc496"
                 },
@@ -302,8 +184,8 @@
                         "variable": "L0",
                         "__collapseElse": true,
                         "__disableElse": true,
-                        "__comment": false,
-                        "__collapse": true
+                        "__comment": true,
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
@@ -313,7 +195,8 @@
                                     "text": [
                                         "Cantayi acmadan \nyatagin yanina koydun"
                                     ],
-                                    "avatarId": ""
+                                    "avatarId": "",
+                                    "__comment": true
                                 },
                                 "id": "d1ef24af-72c3-4307-a9ae-fcfb1ff920bf"
                             }
@@ -725,9 +608,11 @@
             "triggers": [],
             "script": [
                 {
-                    "command": "EVENT_HIDE_SPRITES",
-                    "args": {},
-                    "id": "162e4326-fd2a-4c5b-9374-fb5a98b0692d"
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "e55dd738-8bbc-429c-9a8e-143e772de20d"
                 },
                 {
                     "command": "EVENT_TEXT",
@@ -775,7 +660,7 @@
                                 "args": {
                                     "text": [
                                         "Kendini yavas yavas \ndaha iyi hissetmeye \nbasladin.\n",
-                                        "Etrafa bakinmaya \nbasladin\n3 tane kapi gordun.",
+                                        "Etrafa bakinmaya \nbasladin\n2 tane kapi gordun.",
                                         "Odanin ortasindaki \nyataga bakiyorsun.",
                                         "Yerde yatagin ayak\ndibinde bir canta \ngoruyorsun.",
                                         "Cantaya dogru\nyuruyosun."
@@ -805,10 +690,12 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "Kitabi masada biraktin."
+                            "Kitabi masada biraktin.",
+                            "Etrafa bakiniyorsun.",
+                            "Yatagin orada bir canta\ngordun. Cantaya dogru\nyuruyorsun."
                         ],
                         "avatarId": "",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "id": "f27f9694-4b38-40db-a150-15144979f590"
                 },
@@ -1031,9 +918,11 @@
             "triggers": [],
             "script": [
                 {
-                    "command": "EVENT_HIDE_SPRITES",
-                    "args": {},
-                    "id": "264d7ba9-44a5-4756-9de0-d0ccf3e6e540"
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "41a8b404-97ac-4d39-95e1-ee379626b012"
                 },
                 {
                     "command": "EVENT_TEXT",
@@ -1074,15 +963,17 @@
             "collisions": [],
             "autoFadeSpeed": 2,
             "id": "5d985b87-d2bc-4be6-8a50-2fd7cb3e7d97",
-            "x": 479.33333587646484,
-            "y": 864.6666870117188,
+            "x": 478.08333587646484,
+            "y": 864.9166870117188,
             "actors": [],
             "triggers": [],
             "script": [
                 {
-                    "command": "EVENT_HIDE_SPRITES",
-                    "args": {},
-                    "id": "9ec8afba-0ff1-4bef-b975-da17d72b66c5"
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "$self$"
+                    },
+                    "id": "fbd9c974-e35f-486c-b5aa-bae0178ea1ec"
                 },
                 {
                     "command": "EVENT_TEXT",
@@ -1105,48 +996,6 @@
                         "fadeSpeed": "2"
                     },
                     "id": "f87a3e26-b633-426e-99fd-4a41de6845c2"
-                }
-            ],
-            "playerHit1Script": [],
-            "playerHit2Script": [],
-            "playerHit3Script": [],
-            "playerSpriteSheetId": "49cb262b-6537-4c0c-91b5-db70ccf3fe01"
-        },
-        {
-            "name": "SAHNE 14",
-            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
-            "width": 20,
-            "height": 18,
-            "type": "TOPDOWN",
-            "paletteIds": [],
-            "spritePaletteIds": [],
-            "collisions": [],
-            "autoFadeSpeed": 1,
-            "id": "1dfb1705-4764-4f94-9b1e-c04b5d77b4e4",
-            "x": 636.3333358764648,
-            "y": 1085.3333129882812,
-            "actors": [],
-            "triggers": [],
-            "script": [
-                {
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "Derin bir nefes alip..."
-                        ],
-                        "avatarId": ""
-                    },
-                    "id": "c528e611-6309-4083-8982-4798b036a624"
-                },
-                {
-                    "command": "EVENT_TEXT",
-                    "args": {
-                        "text": [
-                            "...yataktan kalkmaya\ncalisiyorsun."
-                        ],
-                        "avatarId": ""
-                    },
-                    "id": "f50600ab-8afb-43ba-abe3-c2744c50a92d"
                 }
             ],
             "playerHit1Script": [],
@@ -1364,6 +1213,9 @@
                 0,
                 15,
                 15,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -1376,12 +1228,9 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
+                15,
+                15,
+                15,
                 15,
                 15,
                 15,
@@ -1477,13 +1326,6 @@
                 0,
                 0,
                 0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                15,
                 15,
                 0,
                 0,
@@ -1491,6 +1333,8 @@
                 0,
                 0,
                 15,
+                15,
+                0,
                 0,
                 0,
                 0,
@@ -1498,6 +1342,11 @@
                 15,
                 0,
                 0,
+                0,
+                0,
+                15,
+                15,
+                15,
                 0,
                 0,
                 0,
@@ -1526,9 +1375,106 @@
             ],
             "autoFadeSpeed": 4,
             "id": "298dcd9f-e9a3-4b05-8373-c83eb5460c74",
-            "x": 390.33333587646484,
-            "y": 224,
-            "actors": [],
+            "x": 390.83333587646484,
+            "y": 224.5,
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "5bb3109e-3aa2-417a-b4d2-43c6ae5c9792",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Oyun Hakkinda\nbilgileri buradan \nogrenebilirsin."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "3ab89deb-d1c9-4279-be3e-49fefb136263"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "e3fae656-d4e2-4a44-bfa3-1b2e04d04487",
+                    "x": 2,
+                    "y": 11
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "5bb3109e-3aa2-417a-b4d2-43c6ae5c9792",
+                    "direction": "up",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Yapim asamasinda..."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "9bc3a786-69d2-4b58-b744-5780c368215f"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "215d2214-9940-4a7b-9b66-c9c86f85b1ae",
+                    "x": 16,
+                    "y": 11
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "5bb3109e-3aa2-417a-b4d2-43c6ae5c9792",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Yeni Oyun"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "514177cb-8d2e-43f7-bdf9-1d27509935db"
+                        }
+                    ],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "ccf909dd-e14e-4c7e-a6bf-b75f7e90090d",
+                    "x": 12,
+                    "y": 15
+                }
+            ],
             "triggers": [
                 {
                     "name": "YENI OYUN",
@@ -1549,16 +1495,6 @@
                                 "__comment": true
                             },
                             "id": "805828a6-2985-4eed-930e-e79ecd727940"
-                        },
-                        {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "YENI OYUN..."
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "0491e85d-0726-44a5-af59-0780e902a2b9"
                         },
                         {
                             "command": "EVENT_CHOICE",
@@ -1593,20 +1529,10 @@
                     "height": 1,
                     "script": [
                         {
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": [
-                                    "Sicak Cikolata hakkinda"
-                                ],
-                                "avatarId": ""
-                            },
-                            "id": "6062148e-6134-40e2-a3c8-dd370a16daf3"
-                        },
-                        {
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
                                 "sceneId": "cebeafc6-f97c-44c8-9315-6d4221815dbe",
-                                "x": 17,
+                                "x": 15,
                                 "y": 13,
                                 "direction": "",
                                 "fadeSpeed": "2",
@@ -1627,7 +1553,18 @@
                             "id": "532ca940-2dbc-484e-813c-578398d32b34"
                         }
                     ],
-                    "leaveScript": []
+                    "leaveScript": [
+                        {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "b"
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "61e61ae5-1b49-4c73-b3ef-3acaf1137f25"
+                        }
+                    ]
                 },
                 {
                     "name": "DEVAM",
@@ -1717,8 +1654,11 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": [
-                            "Merhaba Oyuncu!\nKendimi tanitayim\nBen \"Prot-O-TIP\".",
-                            "Oyunda size yardimci \nolacagim."
+                            " Merhaba Oyuncu!\n Kendimi tanitayim\n Ben \"Prot-O-TIP\".",
+                            " Oyunda size yardimci \n olacagim.",
+                            "Uc yol bulunmakta",
+                            " Her yolun yaninda\n Yolun ne olduguna dair\n tabela var.",
+                            " Hangisini sececeksin?\n"
                         ],
                         "avatarId": ""
                     },
@@ -1757,10 +1697,19 @@
                         "x": 0,
                         "y": 13,
                         "__collapseElse": true,
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "children": {
                         "true": [
+                            {
+                                "command": "EVENT_CHOICE",
+                                "args": {
+                                    "variable": "1",
+                                    "trueText": "Evet",
+                                    "falseText": "Hayir"
+                                },
+                                "id": "be0283cb-48f5-4cfc-916a-5136c70c904f"
+                            },
                             {
                                 "command": "EVENT_SWITCH_SCENE",
                                 "args": {
@@ -2251,72 +2200,29 @@
                                 "fadeSpeed": "2"
                             },
                             "id": "c3537ce9-fc6e-4542-a560-d1446f819bea"
+                        },
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "c1385a48-d32a-4051-9d8d-03bc50e5976a"
+                            },
+                            "id": "7d70f640-39ad-43c6-9ef2-d510f365c1e9"
                         }
                     ],
-                    "leaveScript": []
+                    "leaveScript": [
+                        {
+                            "command": "EVENT_CALL_CUSTOM_EVENT",
+                            "args": {
+                                "customEventId": "c1385a48-d32a-4051-9d8d-03bc50e5976a",
+                                "__comment": false,
+                                "__collapse": true
+                            },
+                            "id": "3a4ab336-0090-46a2-9fa7-4a4de2330371"
+                        }
+                    ]
                 }
             ],
-            "script": [
-                {
-                    "command": "EVENT_IF_ACTOR_AT_POSITION",
-                    "args": {
-                        "actorId": "$self$",
-                        "x": 14,
-                        "y": 11,
-                        "__collapseElse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "Merhaba Oyuncu",
-                                        "Bu oyun GameboyStudio\nile yapildi.",
-                                        "cizim gerektiren isler\nicin libresprite \nkullanildi.",
-                                        "muzikler icin.....!\nEe sey oyunda muzik yok",
-                                        "Banyoda sarki soylerim\nfakat beste yapmak\nyetenegimi asiyor",
-                                        "Neyse cok konustum.\nDiger tabelalara da\nbakin."
-                                    ],
-                                    "avatarId": ""
-                                },
-                                "id": "2934ba2f-266b-4a67-a357-9e87899456b4"
-                            }
-                        ],
-                        "false": []
-                    },
-                    "id": "3b955caa-444d-43a2-af6c-e229b9ec1c2e"
-                },
-                {
-                    "command": "EVENT_IF_ACTOR_AT_POSITION",
-                    "args": {
-                        "actorId": "$self$",
-                        "x": 2,
-                        "y": 4,
-                        "__collapseElse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_TEXT",
-                                "args": {
-                                    "text": [
-                                        "Oyunun turu mu ne ?",
-                                        "Bol bol okumali eylem\nsecimi yaptiginiz \nbir oyun olacak.",
-                                        "Umarim secenekler \nicinde kaybolmam",
-                                        "Bunun olmamasi\nicin Yalan Ruzgarini\nizlemeye basladim.",
-                                        "Turun boyle olmasinin\nnedeni basit.\nYaparken basit olmasi :)"
-                                    ],
-                                    "avatarId": ""
-                                },
-                                "id": "6179a40e-18d2-4e00-8647-1ae15551b04d"
-                            }
-                        ],
-                        "false": []
-                    },
-                    "id": "9cedba51-f41c-4de8-ac33-7def81b28ab9"
-                }
-            ],
+            "script": [],
             "playerHit1Script": [
                 {
                     "command": "EVENT_IF_ACTOR_AT_POSITION",
@@ -2361,12 +2267,416 @@
             "type": "ADVENTURE",
             "paletteIds": [],
             "spritePaletteIds": [],
-            "collisions": [],
-            "autoFadeSpeed": 1,
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
+            "autoFadeSpeed": 3,
             "id": "01b0d78f-0744-4654-8666-cfd99d04c261",
-            "x": 575.6666717529297,
-            "y": 1384,
-            "actors": [],
+            "x": 576.6666717529297,
+            "y": 1382,
+            "actors": [
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "08ac474e-af39-4acb-87f3-0e8148b03517",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "e6b7af95-2a0d-484c-948b-7619fd72b254",
+                    "x": 6,
+                    "y": 2
+                },
+                {
+                    "name": "",
+                    "frame": 0,
+                    "animate": false,
+                    "spriteSheetId": "08ac474e-af39-4acb-87f3-0e8148b03517",
+                    "direction": "down",
+                    "moveSpeed": 1,
+                    "animSpeed": 15,
+                    "paletteId": "",
+                    "isPinned": false,
+                    "collisionGroup": "",
+                    "script": [],
+                    "startScript": [],
+                    "updateScript": [],
+                    "hit1Script": [],
+                    "hit2Script": [],
+                    "hit3Script": [],
+                    "id": "aecffbb5-bc61-4213-9618-1b8c7eefb95b",
+                    "x": 14,
+                    "y": 4
+                }
+            ],
             "triggers": [],
             "script": [
                 {
@@ -2374,12 +2684,25 @@
                     "args": {
                         "actorId": "$self$"
                     },
-                    "id": "27fd10c6-d02e-4077-8ebe-e05082ac39bd"
+                    "id": "59dd10b8-0cea-4770-b9a2-94e2b4dd9b3d"
+                },
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Su dolu minik bir sise, \nIki tane peynirli tost...",
+                            "...bir minik bicak,\nbir kibrit ve...",
+                            "kagit parcasi \nbuluyorsun."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "426c5416-cce1-408e-b193-f5c9420e3f37"
                 }
             ],
             "playerHit1Script": [],
             "playerHit2Script": [],
-            "playerHit3Script": []
+            "playerHit3Script": [],
+            "playerSpriteSheetId": "11b5452b-187c-43a3-afb1-a1f4f74ffda2"
         }
     ],
     "backgrounds": [
@@ -2470,7 +2793,8 @@
             "height": 18,
             "imageWidth": 160,
             "imageHeight": 144,
-            "filename": "canta_ici.png"
+            "filename": "canta_ici.png",
+            "tileColors": []
         },
         {
             "id": "df3d88f0-0f73-4efd-a442-f64aaab707f1",
@@ -4807,6 +5131,133 @@
             "animSpeed": 15
         },
         {
+            "id": "b72b4cbb-0591-44be-8f40-a302ee60521b",
+            "name": "sag_tabela",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "sag_tabela.png",
+            "checksum": "2c720d8d287d1969c871265db7d08845d4767240",
+            "width": 16,
+            "height": 16,
+            "states": [
+                {
+                    "id": "aa413d51-9f17-4379-9b9a-3d80d44da91e",
+                    "name": "",
+                    "animationType": "fixed",
+                    "flipLeft": false,
+                    "animations": [
+                        {
+                            "id": "5ee6e1d8-e4ba-4678-b242-e253492f904d",
+                            "frames": [
+                                {
+                                    "id": "185c1202-04cc-4823-83e0-59f81aabc476",
+                                    "tiles": [
+                                        {
+                                            "id": "cf031c7c-e036-413d-abe8-90e654e5e971",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "36d67e64-eca6-477b-891f-20978f90d179",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1c988aae-e3b1-4ed7-9a17-cf72a201ad05",
+                            "frames": [
+                                {
+                                    "id": "ca1ccf06-c5a7-4502-9f50-5f99e2894edf",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b0fa009c-1843-409f-9fbd-12e0ba4ae3ee",
+                            "frames": [
+                                {
+                                    "id": "be67d160-03e5-4670-af2a-7f90c498cd8a",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "26e8505c-0005-4f4b-919f-95be8d56739b",
+                            "frames": [
+                                {
+                                    "id": "f1f87f94-2eac-424e-bfeb-380cf1c9c065",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1aaf44d8-d25b-4c73-a9e5-eb014f71f75c",
+                            "frames": [
+                                {
+                                    "id": "5cf494a3-9b8e-4312-9100-ff51f09589ee",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ef5e6e39-011e-4d94-906a-200384a4b29e",
+                            "frames": [
+                                {
+                                    "id": "b8d65fb5-3c15-4877-ae04-ca64a1ce6040",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4c96f161-cf8a-4f55-9129-0356a49c4651",
+                            "frames": [
+                                {
+                                    "id": "1da2700d-87d0-4c61-a747-4adb43dfb06a",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "7044a18a-c2c6-4940-aee2-ebcb576cb1e7",
+                            "frames": [
+                                {
+                                    "id": "303bf92e-ba31-4b56-8e1e-c3aa9ad5719c",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 2,
+            "canvasWidth": 16,
+            "canvasHeight": 16,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
+            "animSpeed": 15
+        },
+        {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
             "name": "static",
             "numFrames": 1,
@@ -5059,6 +5510,106 @@
             "boundsWidth": 16,
             "boundsHeight": 16,
             "animSpeed": 15
+        },
+        {
+            "id": "08ac474e-af39-4acb-87f3-0e8148b03517",
+            "name": "tost",
+            "numFrames": 0.5,
+            "type": "animated",
+            "filename": "tost.png",
+            "checksum": "76b2721b0479966677000bdd92da3bc1a5778992",
+            "width": 8,
+            "height": 8,
+            "states": [
+                {
+                    "id": "91c79ff2-ba66-4be7-ac23-a82a53aa66ff",
+                    "name": "",
+                    "animationType": "multi_movement",
+                    "flipLeft": true,
+                    "animations": [
+                        {
+                            "id": "8844dae4-3fa8-4e61-9884-33bec3354e4d",
+                            "frames": [
+                                {
+                                    "id": "a1c8a3b0-bcd9-4dad-8659-b6b611f02980",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "64b770dd-230e-4954-bb81-67cc874966c1",
+                            "frames": [
+                                {
+                                    "id": "ed498d08-5dea-4d21-8cb3-0f17a4115542",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9cd3be3a-cfc3-4e18-9df6-f05cb153d12d",
+                            "frames": [
+                                {
+                                    "id": "16c5204b-7baa-4ea6-8b34-311df81efdc9",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "1756f9cd-0372-466b-bbbd-1eac8f251498",
+                            "frames": [
+                                {
+                                    "id": "da28a3ae-551d-4646-ab1c-0efb2833b0a9",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "5ec08e9b-94cb-41c3-8eda-ffeab54c7607",
+                            "frames": [
+                                {
+                                    "id": "5f27163f-24a3-4e13-87b1-0c8d5237e502",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "56f48aca-05a3-4bff-8bee-f5af4602b08e",
+                            "frames": [
+                                {
+                                    "id": "f59a2885-f579-423e-9557-e2340ce57f45",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "40b33d95-edba-4c15-85d2-79e4f1a46238",
+                            "frames": [
+                                {
+                                    "id": "2907f50d-7129-4e7f-8e65-51f98c66090e",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f139acf4-f86c-4f81-bfd2-2a38d7ed4eca",
+                            "frames": [
+                                {
+                                    "id": "d8215d0f-20fe-4019-8045-0de21a899d9c",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 0,
+            "canvasWidth": 32,
+            "canvasHeight": 32,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
+            "animSpeed": 15
         }
     ],
     "palettes": [
@@ -5202,8 +5753,53 @@
     "customEvents": [
         {
             "id": "c1385a48-d32a-4051-9d8d-03bc50e5976a",
+            "name": "SAHNE DEGİSİM",
+            "description": "sahne degisimi",
+            "variables": {},
+            "actors": {},
+            "script": [
+                {
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "298dcd9f-e9a3-4b05-8373-c83eb5460c74",
+                        "x": 2,
+                        "y": 15,
+                        "direction": "",
+                        "fadeSpeed": "2"
+                    },
+                    "id": "fe2045fb-8907-48e8-a6a0-ea22175404ad"
+                },
+                {
+                    "command": "EVENT_IF_ACTOR_AT_POSITION",
+                    "args": {
+                        "actorId": "$self$",
+                        "x": 2,
+                        "y": 15,
+                        "__collapseElse": true
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Geri donduk!\nSimdi nereye!"
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "4dee4328-0193-429b-9ba4-4e6c89f0459a"
+                            }
+                        ],
+                        "false": []
+                    },
+                    "id": "0ce76903-3a23-4e09-a784-63fbdcbd44a8"
+                }
+            ]
+        },
+        {
+            "id": "3e2fa9d6-15cc-4fef-9a98-8c847f9d11e1",
             "name": "",
-            "description": "tabela",
+            "description": "",
             "variables": {},
             "actors": {},
             "script": []
@@ -5389,9 +5985,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 101.33333587646484,
-        "worldScrollY": 0,
-        "zoom": 100,
+        "worldScrollX": 904,
+        "worldScrollY": 2367,
+        "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
@@ -5419,9 +6015,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            205,
-            113,
-            279
+            235,
+            129,
+            320
         ],
         "showNavigator": true,
         "defaultFontId": "8ed435d9-51cb-44e7-8b0d-ca85e63ca427",
