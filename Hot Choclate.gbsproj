@@ -745,17 +745,6 @@
                 {
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
-                        "sceneId": "a2891b7c-8f6b-4b8a-a9c9-48a36187a500",
-                        "x": 16,
-                        "y": 9,
-                        "direction": "",
-                        "fadeSpeed": "2"
-                    },
-                    "id": "c955b13e-9bc1-46e5-9721-6726be4340a1"
-                },
-                {
-                    "command": "EVENT_SWITCH_SCENE",
-                    "args": {
                         "sceneId": "5f55ef48-4c31-4d34-a9f0-cca4da85f881",
                         "x": 7,
                         "y": 7,
@@ -1487,35 +1476,14 @@
                         {
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
-                                "sceneId": "cebeafc6-f97c-44c8-9315-6d4221815dbe",
+                                "sceneId": "ba7f9eed-88fd-4599-bec5-08f0ece68076",
                                 "x": 13,
-                                "y": 14,
+                                "y": 6,
                                 "direction": "",
                                 "fadeSpeed": "2",
-                                "__comment": true
+                                "__comment": false
                             },
                             "id": "805828a6-2985-4eed-930e-e79ecd727940"
-                        },
-                        {
-                            "command": "EVENT_CHOICE",
-                            "args": {
-                                "variable": "1",
-                                "trueText": "EVET",
-                                "falseText": "HAYIR",
-                                "__comment": true
-                            },
-                            "id": "02d1a8d5-c090-46ec-9abb-a95c84bd8a25"
-                        },
-                        {
-                            "command": "EVENT_SWITCH_SCENE",
-                            "args": {
-                                "sceneId": "ba7f9eed-88fd-4599-bec5-08f0ece68076",
-                                "x": 11,
-                                "y": 2,
-                                "direction": "",
-                                "fadeSpeed": "2"
-                            },
-                            "id": "14521762-422d-4894-adbb-fb058925269b"
                         }
                     ],
                     "leaveScript": []
@@ -1533,10 +1501,11 @@
                             "args": {
                                 "sceneId": "cebeafc6-f97c-44c8-9315-6d4221815dbe",
                                 "x": 15,
-                                "y": 13,
+                                "y": 15,
                                 "direction": "",
                                 "fadeSpeed": "2",
-                                "__comment": false
+                                "__comment": false,
+                                "__collapse": false
                             },
                             "id": "72860d2f-0cf0-4d9b-ab84-4fb2a304c241"
                         },
@@ -1546,11 +1515,57 @@
                                 "text": [
                                     "Izninizle oyunu \ntanitacagim...",
                                     "Burada tabelalar var.\nOyun hakkinda bilgiler\nicin bakabilirsin.",
-                                    "Once hangi tabelaya\ngideyim?"
+                                    "Ilk tabelaya\nben gidiyorum."
                                 ],
                                 "avatarId": ""
                             },
                             "id": "532ca940-2dbc-484e-813c-578398d32b34"
+                        },
+                        {
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "L0",
+                                "__collapseElse": true,
+                                "__disableElse": true,
+                                "__comment": true
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "cebeafc6-f97c-44c8-9315-6d4221815dbe",
+                                            "x": 15,
+                                            "y": 15,
+                                            "direction": "left",
+                                            "fadeSpeed": "2",
+                                            "__comment": true,
+                                            "__collapse": false
+                                        },
+                                        "id": "15fa5230-9197-4ad5-a88a-594b7c72597b"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "3883346d-4577-42e7-a712-a6874a887370"
+                        },
+                        {
+                            "command": "EVENT_ACTOR_MOVE_TO",
+                            "args": {
+                                "actorId": "$self$",
+                                "x": {
+                                    "type": "number",
+                                    "value": 16
+                                },
+                                "y": {
+                                    "type": "number",
+                                    "value": 12
+                                },
+                                "moveType": "horizontal",
+                                "useCollisions": false,
+                                "__collapse": false
+                            },
+                            "id": "9fdf9054-0e00-418e-b6a9-ea407f720f2d"
                         }
                     ],
                     "leaveScript": [
@@ -1590,65 +1605,27 @@
             ],
             "script": [
                 {
-                    "command": "EVENT_CHOICE",
+                    "command": "EVENT_IF_TRUE",
                     "args": {
-                        "variable": "L0",
-                        "trueText": "YENI",
-                        "falseText": "DEVAM",
-                        "__comment": true
+                        "variable": "2",
+                        "__collapseElse": true
                     },
-                    "id": "5e309bc3-a121-4f13-b51c-6418475f87e0"
-                },
-                {
-                    "command": "EVENT_ACTOR_MOVE_TO",
-                    "args": {
-                        "actorId": "$self$",
-                        "x": {
-                            "type": "number",
-                            "value": 2
-                        },
-                        "y": {
-                            "type": "number",
-                            "value": 11
-                        },
-                        "moveType": "horizontal",
-                        "useCollisions": true,
-                        "__comment": true
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_TEXT",
+                                "args": {
+                                    "text": [
+                                        "Geri donduk!\nSimdi nereye..."
+                                    ],
+                                    "avatarId": ""
+                                },
+                                "id": "b1a11b3f-4c09-42c7-a805-e1652a13df2f"
+                            }
+                        ],
+                        "false": []
                     },
-                    "id": "1dbf44db-863e-49c6-8baf-d6d2df0d304b"
-                },
-                {
-                    "command": "EVENT_ACTOR_SET_DIRECTION",
-                    "args": {
-                        "actorId": "$self$",
-                        "direction": {
-                            "type": "direction",
-                            "value": "left"
-                        },
-                        "__comment": true
-                    },
-                    "id": "a2494890-ac7d-4eaa-a2a7-0b0dea8fd289"
-                },
-                {
-                    "command": "EVENT_ACTOR_MOVE_RELATIVE",
-                    "args": {
-                        "actorId": "$self$",
-                        "x": 2,
-                        "y": 11,
-                        "moveType": "horizontal",
-                        "useCollisions": false,
-                        "__collapse": false,
-                        "__comment": true
-                    },
-                    "id": "c3cadab5-5bd6-4a4a-8a3b-02994963fa37"
-                },
-                {
-                    "command": "EVENT_ACTOR_PUSH",
-                    "args": {
-                        "continue": true,
-                        "__comment": true
-                    },
-                    "id": "adba5a54-d38a-4181-9c1a-1baf45608e74"
+                    "id": "c87e4b86-5783-45e3-ad8b-8b991c844386"
                 },
                 {
                     "command": "EVENT_TEXT",
@@ -1660,71 +1637,10 @@
                             " Her yolun yaninda\n Yolun ne olduguna dair\n tabela var.",
                             " Hangisini sececeksin?\n"
                         ],
-                        "avatarId": ""
+                        "avatarId": "",
+                        "__collapse": true
                     },
                     "id": "ab1a70eb-0f1c-4576-ac7f-5dc3e31a1ecc"
-                },
-                {
-                    "command": "EVENT_IF_ACTOR_AT_POSITION",
-                    "args": {
-                        "actorId": "$self$",
-                        "x": 9,
-                        "y": 17,
-                        "__collapseElse": true
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_SWITCH_SCENE",
-                                "args": {
-                                    "sceneId": "ba7f9eed-88fd-4599-bec5-08f0ece68076",
-                                    "x": 3,
-                                    "y": 1,
-                                    "direction": "",
-                                    "fadeSpeed": "2"
-                                },
-                                "id": "ed56c183-2e5a-4630-b0e1-1de6cf5eed95"
-                            }
-                        ],
-                        "false": []
-                    },
-                    "id": "985407a3-f743-4b3e-8bbc-f2e4936a5b86"
-                },
-                {
-                    "command": "EVENT_IF_ACTOR_AT_POSITION",
-                    "args": {
-                        "actorId": "$self$",
-                        "x": 0,
-                        "y": 13,
-                        "__collapseElse": true,
-                        "__collapse": false
-                    },
-                    "children": {
-                        "true": [
-                            {
-                                "command": "EVENT_CHOICE",
-                                "args": {
-                                    "variable": "1",
-                                    "trueText": "Evet",
-                                    "falseText": "Hayir"
-                                },
-                                "id": "be0283cb-48f5-4cfc-916a-5136c70c904f"
-                            },
-                            {
-                                "command": "EVENT_SWITCH_SCENE",
-                                "args": {
-                                    "sceneId": "cebeafc6-f97c-44c8-9315-6d4221815dbe",
-                                    "x": 9,
-                                    "y": 4,
-                                    "direction": "down",
-                                    "fadeSpeed": "2"
-                                },
-                                "id": "b633b70d-ffec-40be-8980-0a994077ebee"
-                            }
-                        ],
-                        "false": []
-                    },
-                    "id": "9c528f17-9d2e-4393-bef4-9350448da0aa"
                 }
             ],
             "playerHit1Script": [],
@@ -2098,7 +2014,7 @@
                 0,
                 0,
                 0,
-                15,
+                0,
                 15,
                 15
             ],
@@ -2222,7 +2138,38 @@
                     ]
                 }
             ],
-            "script": [],
+            "script": [
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Izninizle oyunu \ntanitacagim...",
+                            "Burada tabelalar var.\nOyun hakkinda bilgiler\nicin bakabilirsin.",
+                            "Ilk tabelaya\nben gidiyorum.",
+                            "Tabelanin yanina gidince\n\"A\" tusuna basin."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "2fe72a64-981b-4fce-b94b-9eec9045544e"
+                },
+                {
+                    "command": "EVENT_ACTOR_MOVE_TO",
+                    "args": {
+                        "actorId": "$self$",
+                        "x": {
+                            "type": "number",
+                            "value": 15
+                        },
+                        "y": {
+                            "type": "number",
+                            "value": 12
+                        },
+                        "moveType": "horizontal",
+                        "useCollisions": false
+                    },
+                    "id": "81707fb4-7d02-46e0-8af9-5f5efcba9dbc"
+                }
+            ],
             "playerHit1Script": [
                 {
                     "command": "EVENT_IF_ACTOR_AT_POSITION",
@@ -5968,6 +5915,14 @@
         {
             "id": "04141bb3-ebfe-4ecb-9dfc-b26da4823d73__L0",
             "name": "AC-ACMA"
+        },
+        {
+            "id": "2",
+            "name": "TEKRAR SAHNE"
+        },
+        {
+            "id": "de4c226e-8de6-4dda-9141-61c88c3e9b4a__L0",
+            "name": "GIRIS"
         }
     ],
     "engineFieldValues": [
@@ -5985,8 +5940,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 904,
-        "worldScrollY": 2367,
+        "worldScrollX": 218,
+        "worldScrollY": 0,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
@@ -6015,9 +5970,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            235,
-            129,
-            320
+            205,
+            112,
+            279
         ],
         "showNavigator": true,
         "defaultFontId": "8ed435d9-51cb-44e7-8b0d-ca85e63ca427",
