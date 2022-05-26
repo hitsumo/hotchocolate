@@ -13,7 +13,7 @@
             "paletteIds": [],
             "spritePaletteIds": [],
             "collisions": [],
-            "autoFadeSpeed": 5,
+            "autoFadeSpeed": 6,
             "id": "0861c0cf-0767-4bf1-94e6-a9b303eab4f6",
             "x": 377.33333587646484,
             "y": 30,
@@ -1510,10 +1510,24 @@
                             "id": "72860d2f-0cf0-4d9b-ab84-4fb2a304c241"
                         },
                         {
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": [
+                                    "Izninizle oyunu \ntanitacagim...",
+                                    "Burada tabelalar var.\nOyun hakkinda bilgiler\nicin bakabilirsin.",
+                                    "Ilk tabelaya\nben gidiyorum."
+                                ],
+                                "avatarId": ""
+                            },
+                            "id": "532ca940-2dbc-484e-813c-578398d32b34"
+                        },
+                        {
                             "command": "EVENT_IF_TRUE",
                             "args": {
                                 "variable": "L0",
-                                "__collapseElse": true
+                                "__collapseElse": true,
+                                "__disableElse": true,
+                                "__comment": true
                             },
                             "children": {
                                 "true": [
@@ -1525,22 +1539,10 @@
                                             "y": 15,
                                             "direction": "left",
                                             "fadeSpeed": "2",
-                                            "__comment": false,
+                                            "__comment": true,
                                             "__collapse": false
                                         },
                                         "id": "15fa5230-9197-4ad5-a88a-594b7c72597b"
-                                    },
-                                    {
-                                        "command": "EVENT_TEXT",
-                                        "args": {
-                                            "text": [
-                                                "Izninizle oyunu \ntanitacagim...",
-                                                "Burada tabelalar var.\nOyun hakkinda bilgiler\nicin bakabilirsin.",
-                                                "Once hangi tabelaya\ngideyim?"
-                                            ],
-                                            "avatarId": ""
-                                        },
-                                        "id": "532ca940-2dbc-484e-813c-578398d32b34"
                                     }
                                 ],
                                 "false": []
@@ -1561,7 +1563,7 @@
                                 },
                                 "moveType": "horizontal",
                                 "useCollisions": false,
-                                "__collapse": true
+                                "__collapse": false
                             },
                             "id": "9fdf9054-0e00-418e-b6a9-ea407f720f2d"
                         }
@@ -2012,7 +2014,7 @@
                 0,
                 0,
                 0,
-                15,
+                0,
                 15,
                 15
             ],
@@ -2136,7 +2138,38 @@
                     ]
                 }
             ],
-            "script": [],
+            "script": [
+                {
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": [
+                            "Izninizle oyunu \ntanitacagim...",
+                            "Burada tabelalar var.\nOyun hakkinda bilgiler\nicin bakabilirsin.",
+                            "Ilk tabelaya\nben gidiyorum.",
+                            "Tabelanin yanina gidince\n\"A\" tusuna basin."
+                        ],
+                        "avatarId": ""
+                    },
+                    "id": "2fe72a64-981b-4fce-b94b-9eec9045544e"
+                },
+                {
+                    "command": "EVENT_ACTOR_MOVE_TO",
+                    "args": {
+                        "actorId": "$self$",
+                        "x": {
+                            "type": "number",
+                            "value": 15
+                        },
+                        "y": {
+                            "type": "number",
+                            "value": 12
+                        },
+                        "moveType": "horizontal",
+                        "useCollisions": false
+                    },
+                    "id": "81707fb4-7d02-46e0-8af9-5f5efcba9dbc"
+                }
+            ],
             "playerHit1Script": [
                 {
                     "command": "EVENT_IF_ACTOR_AT_POSITION",
@@ -5428,12 +5461,12 @@
         {
             "id": "08ac474e-af39-4acb-87f3-0e8148b03517",
             "name": "tost",
-            "numFrames": 0.5,
-            "type": "animated",
+            "numFrames": 1,
+            "type": "static",
             "filename": "tost.png",
-            "checksum": "76b2721b0479966677000bdd92da3bc1a5778992",
-            "width": 8,
-            "height": 8,
+            "checksum": "df889f9efaf9c17898de89e1495eb1dbbbc21a21",
+            "width": 16,
+            "height": 16,
             "states": [
                 {
                     "id": "91c79ff2-ba66-4be7-ac23-a82a53aa66ff",
@@ -5519,6 +5552,133 @@
             "numTiles": 0,
             "canvasWidth": 32,
             "canvasHeight": 32,
+            "boundsX": 0,
+            "boundsY": 0,
+            "boundsWidth": 16,
+            "boundsHeight": 16,
+            "animSpeed": 15
+        },
+        {
+            "id": "8e91fdf3-b1b1-4b45-b1ca-56f3e64e1f8d",
+            "name": "tost2",
+            "numFrames": 1,
+            "type": "static",
+            "filename": "tost2.png",
+            "checksum": "7f0946fdda08460a494d2f3c388954e3aec84d0d",
+            "width": 16,
+            "height": 16,
+            "states": [
+                {
+                    "id": "bb9c7f1f-e1b5-41e8-b90e-ba496f7ae5bd",
+                    "name": "",
+                    "animationType": "fixed",
+                    "flipLeft": false,
+                    "animations": [
+                        {
+                            "id": "1368e4d9-07a9-4cba-a847-1291c12df349",
+                            "frames": [
+                                {
+                                    "id": "d21cda19-714e-4688-b051-64803ebe2246",
+                                    "tiles": [
+                                        {
+                                            "id": "a924925e-e12f-43c4-bce1-12d19e847a4e",
+                                            "x": 0,
+                                            "y": 0,
+                                            "sliceX": 0,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        },
+                                        {
+                                            "id": "22ee543f-a8da-4aff-892c-33cbc1bd6f8a",
+                                            "x": 8,
+                                            "y": 0,
+                                            "sliceX": 8,
+                                            "sliceY": 0,
+                                            "flipX": false,
+                                            "flipY": false,
+                                            "palette": 0,
+                                            "paletteIndex": 0,
+                                            "objPalette": "OBP0",
+                                            "priority": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "c80d9c9a-f1f5-40b8-ac20-534c836d1fc0",
+                            "frames": [
+                                {
+                                    "id": "315c8249-ca01-40bd-81da-8a783762dd64",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "0b610418-2dae-4533-a7e9-8dc7704787e2",
+                            "frames": [
+                                {
+                                    "id": "1d50a62a-93be-4d26-93e3-9f79ec473177",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "57dcfb98-5cec-42e8-a921-3262b641868f",
+                            "frames": [
+                                {
+                                    "id": "a573acda-5da9-44da-995b-a16c08144f20",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "3961ded1-15a7-4555-8d27-48185d116c0b",
+                            "frames": [
+                                {
+                                    "id": "28aec3cb-d096-4dd2-b5d1-f30fa2291378",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f571981e-4501-4fb5-8b9f-655a69715965",
+                            "frames": [
+                                {
+                                    "id": "a68d6e7f-cbc2-4a2f-9848-d9953aba8a79",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "8b41f2e3-fd54-4af9-ad24-c585ce6225b1",
+                            "frames": [
+                                {
+                                    "id": "ee6482e6-5176-4b92-890a-c84dd9b817f5",
+                                    "tiles": []
+                                }
+                            ]
+                        },
+                        {
+                            "id": "b5439e40-0efc-4c38-8eb8-af9a05a21a1c",
+                            "frames": [
+                                {
+                                    "id": "85c536cf-e41a-471a-b20c-4b6974d2a309",
+                                    "tiles": []
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "numTiles": 1,
+            "canvasWidth": 16,
+            "canvasHeight": 16,
             "boundsX": 0,
             "boundsY": 0,
             "boundsWidth": 16,
@@ -5864,6 +6024,10 @@
             "name": "EVET-HAYIR"
         },
         {
+            "id": "2",
+            "name": "TEKRAR SAHNE"
+        },
+        {
             "id": "6",
             "name": "Variable 6"
         },
@@ -5882,10 +6046,6 @@
         {
             "id": "04141bb3-ebfe-4ecb-9dfc-b26da4823d73__L0",
             "name": "AC-ACMA"
-        },
-        {
-            "id": "2",
-            "name": "TEKRAR SAHNE"
         },
         {
             "id": "de4c226e-8de6-4dda-9141-61c88c3e9b4a__L0",
@@ -5907,8 +6067,8 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 218,
-        "worldScrollY": 466.6666564941406,
+        "worldScrollX": 826.6666870117188,
+        "worldScrollY": 2541.333251953125,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
