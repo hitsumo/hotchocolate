@@ -2580,29 +2580,7 @@
             "id": "01b0d78f-0744-4654-8666-cfd99d04c261",
             "x": 576.1666717529297,
             "y": 1382,
-            "actors": [
-                {
-                    "name": "",
-                    "frame": 0,
-                    "animate": false,
-                    "spriteSheetId": "8e91fdf3-b1b1-4b45-b1ca-56f3e64e1f8d",
-                    "direction": "down",
-                    "moveSpeed": 1,
-                    "animSpeed": 15,
-                    "paletteId": "",
-                    "isPinned": false,
-                    "collisionGroup": "",
-                    "script": [],
-                    "startScript": [],
-                    "updateScript": [],
-                    "hit1Script": [],
-                    "hit2Script": [],
-                    "hit3Script": [],
-                    "id": "f926588d-a4dc-4eb8-8802-465f4e68bcc2",
-                    "x": 14,
-                    "y": 3
-                }
-            ],
+            "actors": [],
             "triggers": [],
             "script": [
                 {
@@ -6047,7 +6025,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 826.6666870117188,
-        "worldScrollY": 2308,
+        "worldScrollY": 2541.333251953125,
         "zoom": 200,
         "customColorsEnabled": false,
         "sgbEnabled": false,
